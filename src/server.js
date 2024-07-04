@@ -16,9 +16,9 @@ const server = http.createServer((req, res) => {
       name: "John Doe",
       email: "John.Doe@example.com",
     });
-    return res.end("Criaçao de usuário");
+    return res.writeHead(201).end();
   }
-  return res.end("Hello world");
+  return res.writeHead(204).end();
 });
 
 server.listen(3333, () => {
