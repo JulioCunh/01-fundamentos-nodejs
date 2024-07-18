@@ -6,8 +6,8 @@
 // - Remoção de usuários
 
 // - HTTP
-//   - Método HTTP
-//   - URL
+// - Método HTTP
+// - URL
 
 // GET, POST, PUT, PATCH, DELETE
 
@@ -19,3 +19,6 @@
 
 // GET /users => Buscando usuários no banc-end
 // POST /users => Criar um usuário no back-end
+
+// req => ReadableStream
+// res => WritableStream
