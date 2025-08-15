@@ -1,7 +1,17 @@
 import http from "node:http";
 
 const server = http.createServer((req, res) => {
-  return res.end("Hello World");
+  const { method, url } = req;
+
+  if (method === "GET" && url === "/users") {
+    return res.end("Lista de usuários");
+  }
+
+  if (method === "POST" && url === "/users") {
+    return res.end("Usuário criado");
+  }
+
+  return res.end("Hello Ignite");
 });
 
 server.listen(3333, () => {
