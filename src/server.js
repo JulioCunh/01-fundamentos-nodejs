@@ -18,10 +18,10 @@ const server = http.createServer((req, res) => {
       email: "john.doe@example.com",
     });
 
-    return res.end("Usuário criado");
+    return res.writeHead(201).end();
   }
 
-  return res.end("Hello Ignite");
+  return res.writeHead(404).end();
 });
 
 server.listen(3333, () => {
