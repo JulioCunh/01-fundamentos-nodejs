@@ -30,4 +30,15 @@ export const routes = [
       return res.writeHead(201).end();
     },
   },
+  {
+    method: "DELETE",
+    path: "/users/:id",
+    handler: (req, res) => {
+      const { id } = req.params;
+
+      database.delete("users", id);
+
+      return res.writeHead(204).end();
+    },
+  },
 ];
