@@ -35,11 +35,7 @@ export const routes = [
     method: "DELETE",
     path: buildRoutePath("/users/:id"),
     handler: (req, res) => {
-      const { id } = req.params;
-
-      database.delete("users", id);
-
-      return res.writeHead(204).end();
+      return res.end();
     },
   },
 ];
